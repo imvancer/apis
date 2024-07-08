@@ -1,0 +1,18 @@
+version: v2
+breaking:
+  use:
+  - FILE
+  ignore:
+lint:
+  use:
+  - DEFAULT
+  ignore:
+  - google/type/datetime.proto
+  service_suffix: API
+deps:
+- buf.build/googleapis/googleapis
+- buf.build/bufbuild/protovalidate
+- buf.build/protocolbuffers/wellknowntypes
+modules:
+- path: ./protos/
+  name: buf.build/imvancer/apis
