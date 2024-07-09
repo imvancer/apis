@@ -48,7 +48,7 @@ jobs:
         git config --global user.email "bot@imvancer.com"
     - name: Generate Stub Package
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GA_ACCESS_TOKEN }}
       run: |
         mkdir -p gen/${{ matrix.lang }}
         git clone https://user:$GITHUB_TOKEN@github.com/imvancer/gen${{ matrix.lang }}.git gen/${{ matrix.lang }}
