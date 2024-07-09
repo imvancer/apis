@@ -44,8 +44,8 @@ jobs:
       run: make tools
     - name: Setup git
       run: |
-        git config user.name "github action bot"
-        git config user.email "bot@imvancer.com"
+        git config --global user.name "github action bot"
+        git config --global user.email "bot@imvancer.com"
     - name: Generate Stub Package
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
