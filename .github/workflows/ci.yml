@@ -51,7 +51,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         mkdir -p gen/${{ matrix.lang }}
-        git clone https://user:$GITHUB_TOKEN@github.com/imvancer/gen${{ matrix.lang }}.git
+        git clone https://user:$GITHUB_TOKEN@github.com/imvancer/gen${{ matrix.lang }}.git gen/${{ matrix.lang }}
         find gen/${{ matrix.lang }} -type f -regex '.*\(.go\|.py\|.pyc\|.java\)$' -delete
         find gen/${{ matrix.lang }} -type d -empty -delete
         buf generate
